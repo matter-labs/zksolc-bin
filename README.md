@@ -1,5 +1,6 @@
 # zksolc-bin
 
+> **Warning**
 > This repo is highly experimental, please do not use it.
 > We'll announce when it is ready.
 
