@@ -2,6 +2,8 @@ name: Release Binaries
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'linux-amd64/**'
       - 'macosx-amd64/**'
