@@ -28,9 +28,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            linux-amd64/zksolc-linux-amd64-musl-${{ env.VERSION }}*
-            macosx-amd64/zksolc-macosx-amd64-${{ env.VERSION }}*
-            macosx-arm64/zksolc-macosx-arm64-${{ env.VERSION }}*
-            windows-amd64/zksolc-windows-amd64-gnu-${{ env.VERSION }}*
+            linux-amd64/zksolc-*${{ env.VERSION }}*
+            macosx-amd64/zksolc-*{{ env.VERSION }}*
+            macosx-arm64/zksolc-*${{ env.VERSION }}*
+            windows-amd64/zksolc-*${{ env.VERSION }}*
           tag_name: ${{ env.VERSION }}
           token: ${{ secrets.GITHUB_TOKEN }} 
