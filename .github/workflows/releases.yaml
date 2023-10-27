@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'linux-amd64/**'
+      - 'linux-arm64/**'
       - 'macosx-amd64/**'
       - 'macosx-arm64/**'
       - 'windows-amd64/**'
@@ -29,6 +30,7 @@ jobs:
         with:
           files: |
             linux-amd64/zksolc-*${{ env.VERSION }}*
+            linux-arm64/zksolc-*${{ env.VERSION }}*
             macosx-amd64/zksolc-*{{ env.VERSION }}*
             macosx-arm64/zksolc-*${{ env.VERSION }}*
             windows-amd64/zksolc-*${{ env.VERSION }}*
