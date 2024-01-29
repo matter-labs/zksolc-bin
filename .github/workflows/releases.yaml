@@ -28,6 +28,7 @@ jobs:
       - name: Create GitHub Release and upload binaries
         uses: softprops/action-gh-release@v1
         with:
+          draft: true
           files: |
             linux-amd64/zksolc-*${{ env.VERSION }}*
             linux-arm64/zksolc-*${{ env.VERSION }}*
