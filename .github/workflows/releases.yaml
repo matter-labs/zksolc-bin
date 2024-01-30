@@ -32,7 +32,7 @@ jobs:
           files: |
             linux-amd64/zksolc-*${{ env.VERSION }}*
             linux-arm64/zksolc-*${{ env.VERSION }}*
-            macosx-amd64/zksolc-*{{ env.VERSION }}*
+            macosx-amd64/zksolc-*${{ env.VERSION }}*
             macosx-arm64/zksolc-*${{ env.VERSION }}*
             windows-amd64/zksolc-*${{ env.VERSION }}*
           tag_name: ${{ env.VERSION }}
