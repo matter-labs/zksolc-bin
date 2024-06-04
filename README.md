@@ -1,4 +1,4 @@
-# ZKsync solidity compiler binaries
+# ZKsync Solidity compiler binaries
 
 This repository contains current and historical builds of the ZKsync Solidity (`zksolc`) compiler binaries.
 
