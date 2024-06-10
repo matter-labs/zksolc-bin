@@ -1,3 +1,9 @@
 # IDE project data
 /.idea/
 /.vscode/
+
+# Accidentally created backup files
+*.bak
+
+# MacOS
+/**/.DS_Store
