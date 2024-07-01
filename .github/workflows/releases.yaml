@@ -9,6 +9,7 @@ on:
       - 'linux-arm64/**'
       - 'macosx-amd64/**'
       - 'macosx-arm64/**'
+      - 'macosx/**'
       - 'windows-amd64/**'
   workflow_dispatch:
 
@@ -17,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Extract version from filenames
         run: |
-          VERSION=$(ls macosx-amd64 | grep -oP 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -V | tail -1)
+          VERSION=$(ls linux-amd64 | grep -oP 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -V | tail -1)
           echo "Detected version: $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
@@ -34,6 +35,7 @@ jobs:
             linux-arm64/zksolc-*${{ env.VERSION }}*
             macosx-amd64/zksolc-*${{ env.VERSION }}*
             macosx-arm64/zksolc-*${{ env.VERSION }}*
+            macosx/zksolc-*${{ env.VERSION }}*
             windows-amd64/zksolc-*${{ env.VERSION }}*
           tag_name: ${{ env.VERSION }}
           token: ${{ secrets.GITHUB_TOKEN }} 
